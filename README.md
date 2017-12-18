@@ -17,3 +17,11 @@ procs = 50
 mc_req = MulticoreRequest(call_pack=call_pack, procs=procs)
 mc_req.make_call()
 ```
+
+# Feature List
+- [X] GET calls
+- [X] Post calls
+- [X] Post and Get calls in synchronously
+- [ ] Post request additional arguments
+- [ ] Support for PUT, PATCH, UPDATE
+- [ ] Some nice to have stuff!
