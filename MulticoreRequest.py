@@ -1,3 +1,5 @@
+#!usr/bin/python3.5.0
+# -*- coding: utf8 -*-e
 from multiprocessing import Pool
 import requests as req
 
@@ -25,7 +27,10 @@ class MulticoreRequest():
         """
         :return object:
         """
-        self._run_multicore(self.call, MulticoreRequest.call_pack)
+        self._run_multicore(
+            self.call,
+            MulticoreRequest.call_pack
+        )
 
     def _run_multicore(self, worker, programs):
         """
@@ -59,7 +64,10 @@ class MulticoreRequest():
         """
         if type(call_pack).__name__ == 'list':
             self.procs = 50
-            self._run_multicore(MulticoreRequest.check_required_keys, call_pack)
+            self._run_multicore(
+                MulticoreRequest.check_required_keys,
+                call_pack
+            )
         elif True:
             raise Exception('list type required')
 
